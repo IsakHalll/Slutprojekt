@@ -65,15 +65,23 @@ def main(): # Huvudfunktion
         choice = input("Välj ett alternativ: ")
 
         if choice == "1": # Lägg till inkomst
-            amount = float(input("Ange belopp: "))
-            description = input("Ange beskrivning: ")
-            manager.add_income(amount, description)
+            try:
+                amount = float(input("Ange belopp: "))
+                description = input("Ange beskrivning: ")
+                manager.add_income(amount, description)
+            except:
+                print("Fel: Ange ett giltigt tal för beloppet.")
+                time.sleep(1)
 
         elif choice == "2": # Lägg till utgift
-            amount = float(input("Ange belopp: "))
-            description = input("Ange beskrivning: ")
-            manager.add_expense(amount, description)
-
+            try:
+                amount = float(input("Ange belopp: "))
+                description = input("Ange beskrivning: ")
+                manager.add_expense(amount, description)
+            except ValueError:
+                print("Fel: Ange ett giltigt tal för beloppet.")
+                time.sleep(1)
+                
         elif choice == "3": # Visa saldo
             os.system('cls')
             print(f"Nuvarande balans: {manager.get_balance()}")
