@@ -1,0 +1,1 @@
+{"income": 1123.0, "expenses": 123.0, "transactions": [{"type": "income", "amount": 1000.0, "description": "hej"}, {"type": "income", "amount": 123.0, "description": "123"}, {"type": "expense", "amount": 123.0, "description": "123"}]}
